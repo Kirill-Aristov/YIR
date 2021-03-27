@@ -14,10 +14,10 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 const objLoader = new THREE.OBJLoader();
-objLoader.setPath('/maya-files/');
+objLoader.setPath('maya-files/');
 
 const mtlLoader = new THREE.MTLLoader();
-mtlLoader.setPath('/maya-files/');
+mtlLoader.setPath('maya-files/');
 
 new Promise((resolve) => {
 		mtlLoader.load('yir.obj', (materials) => {
