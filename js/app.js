@@ -13,6 +13,9 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
+//загрузка текстуры
+const laderImeg = new THREE.TextureLoader();
+
 const objLoader = new THREE.OBJLoader();
 objLoader.setPath('maya-files/');
 
@@ -32,9 +35,18 @@ new Promise((resolve) => {
 			scene.add(object);
 		});
 	});
-
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.update();
+
+
+
+
+//загрузка текстуры
+
+
+
+
+
 
 function animate() {
 	requestAnimationFrame(animate);
