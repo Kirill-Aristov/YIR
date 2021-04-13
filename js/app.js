@@ -23,61 +23,20 @@ const mtlLoader = new THREE.MTLLoader();
 mtlLoader.setPath('maya-files/');
 
 new Promise((resolve) => {
-		mtlLoader.load('room.obj', (materials) => {
+		mtlLoader.load('1.obj', (materials) => {
 			resolve(materials);
 		});
 	})
 	.then((materials) => {
 		materials.preload();
 		objLoader.setMaterials(materials);
-		objLoader.load('room.obj', (object) => {
-			yir = object;
-			scene.add(object);
-		});
-		objLoader.load('room2.obj', (object) => {
-			yir = object;
-			scene.add(object);
-		});
-		objLoader.load('room3.obj', (object) => {
-			yir = object;
-			scene.add(object);
-		});
-		objLoader.load('room4.obj', (object) => {
-			yir = object;
-			scene.add(object);
-		});
-		objLoader.load('room5.obj', (object) => {
-			yir = object;
-			scene.add(object);
-		});
-		objLoader.load('room6.obj', (object) => {
-			yir = object;
-			scene.add(object);
-		});
-		objLoader.load('stairs.obj', (object) => {
-			yir = object;
-			scene.add(object);
-		});
-		objLoader.load('chair.obj', (object) => {
-			yir = object;
-			scene.add(object);
-		});
-		objLoader.load('chair1.obj', (object) => {
-			yir = object;
-			scene.add(object);
-		});
-		objLoader.load('chair2.obj', (object) => {
-			yir = object;
-			scene.add(object);
-		});
-		objLoader.load('chair3.obj', (object) => {
-			yir = object;
-			scene.add(object);
-		});
-		objLoader.load('chair4.obj', (object) => {
-			yir = object;
-			scene.add(object);
-		});
+
+		for (let i = 1; i < 25; i++) {
+			objLoader.load(i + '.obj', (object) => {
+				yir = object;
+				scene.add(object);
+			});
+		};
 	});
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.update();
