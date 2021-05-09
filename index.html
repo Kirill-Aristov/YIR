@@ -8,19 +8,53 @@
 	<meta name="viewport"
 		  content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet"
+		  href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet"
 		  href="style.css">
-	<script src="js/three.js"></script>
-	<script src="js/OrbitControls.js"></script>
-	<script src="js/OBJLoader.js"></script>
-	<script src="js/MTLLoader.js"></script>
 
 	<title>Document</title>
 </head>
 
 <body>
-	<script src="js/app.js">
+	<header>
+		<div class="header">
+			<div class="link-header">
+				<div class="text">Из-за большого веса 3д модели, будут фото на которых изображено сделанное за неделю
+				</div>
+				<a href="index.html"
+				   class="link-header__foto">фото</a>
+				<a href="main.html"
+				   class="link-header__model">3д модель</a>
+			</div>
+		</div>
+	</header>
 
-	</script>
+	<main class="swiper-container">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+			<!-- Slides -->
+			<div class="swiper-slide">
+				<img src="img/fiz-xim.png"
+					 alt="">
+			</div>
+			<div class="swiper-slide">
+				<img src="img/stolovay.png"
+					 alt="">
+			</div>
+			<div class="swiper-slide">
+				<img src="img/vhod.png"
+					 alt="">
+			</div>
+		</div>
+		<!-- If we need pagination -->
+		<div class="swiper-pagination"></div>
+
+		<!-- If we need navigation buttons -->
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+	</main>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="js/swiper.js"></script>
 </body>
 
 </html>

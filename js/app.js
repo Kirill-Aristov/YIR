@@ -31,8 +31,7 @@ new Promise((resolve) => {
 		materials.preload();
 		objLoader.setMaterials(materials);
 
-		for (let i = 1; i < 36; i++) {
-			console.log(i);
+		for (let i = 1; i < 47; i++) {
 			objLoader.load(i + '.obj', (object) => {
 				yir = object;
 				scene.add(object);
