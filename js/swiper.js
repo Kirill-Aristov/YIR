@@ -17,4 +17,5 @@ new Swiper(".swiper-container", {
 	touchAngel: 45,
 	//курсор перетаскивания
 	grabCursor: true,
+	autoHeight: true,
 });
