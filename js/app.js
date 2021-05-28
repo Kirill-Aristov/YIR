@@ -4,8 +4,6 @@ let yir;
 const scene = new THREE.Scene();
 const light = new THREE.DirectionalLight('#ffffff', 0.9);
 light.position.set(150, 300, 150);
-const helper = new THREE.DirectionalLightHelper(light, 5, "#ffffff");
-scene.add(helper);
 scene.add(light);
 
 
